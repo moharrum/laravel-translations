@@ -39,7 +39,7 @@
     "extra": {
         "laravel": {
             "providers": [
-                "Moharrum\\LaravelTranslations\\LaravelTranslationsServiceProvider"
+                "Moharrum\\LaravelTranslations\\Providers\\LaravelTranslationsServiceProvider"
             ],
             "aliases": {
 
