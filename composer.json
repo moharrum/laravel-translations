@@ -1,0 +1,49 @@
+{
+    "name": "moharrum/laravel-translations",
+    "description": "Store your Laravel language files in the database.",
+    "type": "library",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Khalid Moharrum",
+            "email": "khalid.moharram@gmail.com",
+            "homepage": "https://github.com/moharrum"
+        }
+    ],
+    "homepage": "https://github.com/moharrum/laravel-translations",
+    "keywords": [
+        "i18n",
+        "crud",
+        "create",
+        "update",
+        "delete",
+        "seeder",
+        "laravel",
+        "moharrum",
+        "database",
+        "translation"
+    ],
+    "require": {
+        "php": "^7.1",
+        "illuminate/support": "~5|~6"
+    },
+    "autoload": {
+        "psr-4": {
+            "Moharrum\\LaravelTranslations\\": "src/"
+        }
+    },
+    "require": {
+        "illuminate/support": "~5|~6"
+    },
+    "minimum-stability": "dev",
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Moharrum\\LaravelTranslations\\LaravelTranslationsServiceProvider"
+            ],
+            "aliases": {
+
+            }
+        }
+    }
+}

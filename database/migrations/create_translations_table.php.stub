@@ -1,0 +1,45 @@
+<?php
+
+use Illuminate\Database\Schema\Blueprint;
+use Illuminate\Database\Migrations\Migration;
+
+/**
+ * The translations table migration.
+ *
+ * @author Khalid Moharrum <khalid.moharram@gmail.com>
+ */
+class CreateTranslationsTable extends Migration
+{
+    /**
+     * Run the migrations.
+     *
+     * @return void
+     */
+    public function up(): void
+    {
+        Schema::create(config('laravel-translations.table'), function (Blueprint $table) {
+            $table->increments('id');
+
+            $table->string('namespace')
+                ->nullable();
+
+            $table->string('group');
+
+            $table->string('key');
+
+            $table->text('text');
+
+            $table->timestamps();
+        });
+    }
+
+    /**
+     * Reverse the migrations.
+     *
+     * @return void
+     */
+    public function down(): void
+    {
+        Schema::drop(config('laravel-translations.table'));
+    }
+}
