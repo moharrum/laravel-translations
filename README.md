@@ -29,13 +29,14 @@ This will will query both `file` and `database` drivers and will retrieve both t
 Install the package via composer:
 
 ```bash
-composer require moharrum/laravel-translations
+    composer require moharrum/laravel-translations
 ```
 
-Edit `config/app.php` and add the `provider` (only for Laravel 5.4 or below):
-
+Edit `config/app.php`, remove or comment Laravel translation service provider and add package service provider:
 ```php
     'providers' => [
+        // Illuminate\Translation\TranslationServiceProvider::class,
+
         Moharrum\LaravelTranslations\Providers\LaravelTranslationsServiceProvider::class,
     ]
 ```

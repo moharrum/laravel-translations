@@ -164,7 +164,7 @@ class Translation extends Model
     protected function flushGroupCache(): void
     {
         foreach ($this->getTranslatedLocales() as $locale) {
-            Cache::forget(static::getCacheKey($locale, $this->$group, $this->$namespace));
+            Cache::forget(static::getCacheKey($locale, $this->group, $this->namespace));
         }
     }
 
