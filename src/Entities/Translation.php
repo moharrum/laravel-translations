@@ -78,8 +78,8 @@ class Translation extends Model
     /**
      * Fetches translation line from storage and stores it in cache.
      *
-     * @param string $locale
-     * @param string $group
+     * @param string      $locale
+     * @param string      $group
      * @param string|null $namespace
      *
      * @return array
@@ -112,8 +112,8 @@ class Translation extends Model
     /**
      * Build appropriate cache key for translation file.
      *
-     * @param string $locale
-     * @param string $group
+     * @param string      $locale
+     * @param string      $group
      * @param string|null $namespace
      *
      * @return string
@@ -132,7 +132,7 @@ class Translation extends Model
      *
      * @return string
      */
-    public function getTranslation(string $locale): ?string
+    public function getTranslation(string $locale)
     {
         if (! isset($this->text[$locale])) {
             $fallback = config('app.fallback_locale');
